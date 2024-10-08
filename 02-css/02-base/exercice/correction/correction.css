@@ -1,0 +1,67 @@
+:root
+{
+    font-size: 20px;
+}
+/* Article Couleurs */
+.article-couleur h3
+{
+    font-family:cursive;
+}
+.article-couleur p
+{
+    font-family: monospace;
+}
+/* article 1 */
+.article-couleur.article-1
+{
+    background-color: lightblue;
+}
+.article-couleur.article-1 h3
+{
+    color: rgb(36, 36, 90);
+}
+.article-couleur.article-1 p
+{
+    font-style: italic;
+}
+/* article 2 */
+.article-couleur.article-2
+{
+    background-color: lightgreen;
+}
+.article-couleur.article-2 h3
+{
+    color: #217F1B;
+}
+.article-couleur.article-2 p
+{
+    font-weight: bold;
+}
+/* Article Tailles */
+.article-taille h3
+{
+    font-family:Impact, Haettenschweiler;
+}
+.article-taille p
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+}
+/* article 3 */
+.article-taille.article-3 h3
+{
+    font-size: 2rem;
+}
+.article-taille.article-3 p::first-letter
+{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+/* article 4 */
+.article-taille.article-4
+{
+    font-size: clamp(16px, 2vw, 32px);
+}
+.article-taille.article-4 h3
+{
+    font-size: 2em;
+}
