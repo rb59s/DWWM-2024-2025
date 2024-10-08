@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- il faut préciser la langue -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouver les erreurs</title>
+    <!-- La description doit être claire et concise -->
+    <meta name="description" content="Exercice sur les bonnes conduites HTML">
+    <!-- Le type et le fichier ne correspondaient pas -->
+    <link rel="shortcut icon" href="../../ressources/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Il faut respecter la sémantique, que les noms des balises aient un sens -->
+    <header id="accueil">
+        <!-- Il faut des attributs "alt" aux images -->
+        <img src="../../ressources/images/icon/AFCI-LOGO.svg" alt="logo du site">
+        <!-- Le titre du site devrait avoir un plus gros "h" que le reste de la page -->
+        <h1>super site !</h1>
+    </header>
+    <!-- une liste ne doit contenir que des "li" -->
+    <h2>Navigation</h2>
+    <menu>
+        <!-- Les target blank sur un lien interne à la page n'est pas utile -->
+        <li><a href="#accueil">accueil</a></li>
+        <!-- Les balises li n'étaient pas fermées -->
+        <li><a href="#listeArticle">articles</a></li>
+        <!-- C'est plus confortable pour l'utilisateur si le menu suis l'ordre de la page -->
+        <li><a href="#contact">contact</a></li>
+    </menu>
+    <main>
+        <section id="listeArticle">
+            <!-- Ici on trouvera plutôt des articles dans la section que des sections dans un article -->
+            <article>
+                <!-- Les sections et articles sont sensé avoir un titre -->
+                <h2>Le titre de mon premier article !</h2>
+                <!-- la balise main ne devrait apparaître qu'une fois -->
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis recusandae sequi ex ullam, deleniti iure aspernatur quis eum quod voluptatum minima optio commodi unde quas dolore iste vero in saepe?
+                </p>
+            </article>
+            <article>
+                <h2>Le titre de mon second article !</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis recusandae sequi ex ullam, deleniti iure aspernatur quis eum quod voluptatum minima optio commodi unde quas dolore iste vero in saepe?
+                </p>
+            </article>
+        </section>
+    </main>
+    <!-- On ne devrait avoir qu'un seul main, on pourra mettre un footer en bas -->
+    <footer>
+        <!-- Le formulaire devrait indiquer l'action et la méthode -->
+        <form id="contact" action="#" method="get">
+            <!-- Les values forcent l'utilisateur à supprimer le contenu, un placeholder serait plus pratique -->
+            <input type="text" name="nom" placeholder="Votre nom !">
+            <br>
+            <!-- Un name ne doit apparaître qu'une fois dans un formulaire -->
+            <input type="text" name="prenom" placeholder="votre prénom !">
+            <br>
+            <!-- Pour un texte qui peut être long comme un commentaire, un textarea est plus pratique -->
+            <textarea name="commentaire" placeholder="votre commentaire !"></textarea>
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+    </footer>
+</body>
+</html>

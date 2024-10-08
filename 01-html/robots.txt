@@ -1,0 +1,6 @@
+Sitemap: https://www.monsupersite.com/supersitemap.xml
+User-agent: *
+Disallow: /admin/
+
+User-agent: Googlebot
+Disallow: /profile/

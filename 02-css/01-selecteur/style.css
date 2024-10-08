@@ -1,0 +1,230 @@
+/* 
+    Le CSS peut s'écrire à trois endroits différent.
+    - directement sur la balise.
+    - dans une balise style dans le head du fichier.
+    - Ou dans un fichier CSS à part qui sera lié au HTML via une balise "link"
+
+    le CSS sur la balise aura toujours la priorité sur le reste.
+    Dans les autres cas, c'est celui qui arrive en dernier qui écrase les précédents. (si il y a des règles en commun)
+
+    Une règle CSS se compose en trois parties:
+    selecteur{ propriété: valeur;}
+
+    - le selecteur permettra d'indiquer quelle balise on souhaite modifier.
+    - la propriété indique ce que l'on souhaite modifier.
+    - la valeur que l'on donne à la propriété.
+*/
+h1{
+    background-color: aquamarine;
+}
+/* ----------------- Enfant Direct ou Indirect -------------- */
+main p 
+{
+    /* Tous "p" qui se trouve dans un "main", peu importe si il y a d'autres balises entre eux */
+    background-color: lightsalmon;
+}
+main > p
+{
+    /* Tous "p" qui se trouve directement enfant d'un "main" */
+    background-color: olive;
+}
+/* ----------------- Frère Direct ou Indirect -------------- */
+abbr ~ span
+{
+    /* Tous "span" qui a un "abbr" dans les balises précédentes (au même niveau) */
+    background-color: yellowgreen;
+}
+abbr + span
+{
+    /* tous "span" qui est juste après un "abbr" */
+    background-color: peachpuff;
+}
+/* --------------- multiple selection ---------------------- */
+article p, header p
+{
+    /* 
+        Pour selectionner plusieurs éléments différents pour leur appliquer une même propriété,
+        On séparera chaque selecteur d'une virgule.
+
+        font-family permet de changer la police d'écriture
+    */
+    font-family: cursive;
+}
+/* --------------------Pseudo Classes --------------------- */
+/* 
+    Les pseudo classes sont des selecteur qui vont permettres de selectionner des éléments à certaine conditions.
+    Leurs syntaxe est la suivante ":nom-pseudo-classe"
+*/
+li:hover
+{
+    /* 
+        Permet de selectionner un élément si il est survolé (par la souris)
+        !ATTENTION : Ne fonctionne pas ou peu sur appareil tactile
+    */
+    background-color: deeppink;
+}
+li:nth-of-type(3), span:nth-of-type(2)
+{
+    /* 
+        nth-of-type va compter le nombre d'élément du type indiqué (ici li ou span) et selectionné celui qui correspond (3 ou 4)
+
+        Existe aussi en comptant depuis la fin ":nth-last-of-type()"
+    */
+    background-color: tomato;
+}
+li:nth-child(4), span:nth-child(2)
+{
+    /* 
+        nth-child va compter le nombre d'élément total, puis si il correspond au type selectionné, alors il appliquera les propriétés.
+
+        existe aussi en comptant depuis la fin "nth-last-child()"
+    */
+    background-color: black;
+    /* Changer la couleur du texte */
+    color: white;
+}
+li:nth-child(2n+3)
+{
+    /* 
+        Selectionne un li sur deux à partir du troisième.
+        n représente un chiffre qui augmente (0,1,2...)
+        Il selectionnera donc (2*0+3=3ème, 2*1+3=5ème...)
+        On pourra trouver aussi des mots clef comme "odd" ou "even" pour selectionner les éléments impair ou pair
+    */
+    background-color: cornflowerblue;
+}
+
+h1 a
+{
+    color: darkorange;
+}
+h1 a:active
+{
+    /* Lorsque l'élément est cliqué */
+    color: cyan;
+}
+h1 a:visited
+{
+    /* lorsqu'un lien a déjà été visité */
+    color: red;
+}
+h1 a:focus
+{
+    /* Quand le focus est sur l'élément */
+    color: hotpink;
+}
+p span:not(:nth-of-type(2))
+{
+    /* tous les span dans un p sauf le second */
+    color: goldenrod;
+}
+*:not(h1, a)
+{
+    /* 
+        "*" signifie "tous" 
+        "font-size" permet de définir la taille de la police
+    */
+    font-size: 20px;
+}
+/* --------------------- Les Pseudo éléments ----------------- */
+/* 
+    Les pseudo éléments vont créer ou simuler des éléments html
+    Ils s'écrivent ainsi "::nom-pseudo-element"
+*/
+article p::first-letter
+{
+    /* Selectionne la première lettre de l'élément */
+    font-size: 50px;
+}
+main > p::first-line
+{
+    /* 
+        Selectionne la première ligne de l'élément
+        font-weight permet de modifier le poid de la police (gras)
+    */
+    font-weight: bold;
+}
+h1::before
+{
+    /* crée un élément au début du h1 */
+    content: "C'est faux ->";
+    color: yellow;
+}
+h1::after
+{
+    /* crée un élément à la fin du h1 */
+    content: "<- Il ment!";
+    color: darkkhaki;
+}
+/* before et after ne fonctionnent que si la propriété "content" est définie */
+/* ---------------------- classes, id et attributs -------------- */
+/* On peut selectionner des éléments plus précisement en leur donnant un nom avec une classe ou un id. */
+#MenuImportant
+{
+    /* Pour selectionner un élément via son id, il faut écrire le nom de l'id précédé de "#" */
+    font-size: 42px;
+    font-weight: bold;
+    color: red;
+}
+.peuImportant
+{
+    /* Pour selectionner un élément via sa classe, il faut écrire le nom de la classe précédé de "." 
+    Si il y a plusieurs noms de classe, on peut simplement les coller sans espace.
+        ".peuImportant.item4.bidule"
+    */
+    font-size: 10px;
+    color: gainsboro;
+}
+/* On peut aussi selectionner des éléments via leurs attributs */
+a[target]
+{
+    /* 
+        pour selectionner via un attribut, je l'indique entre crochet []
+        Ici j'ai selectionné tout "a" qui a un attribut "target"
+    */
+    font-style: italic;
+}
+a[href*="amazon"]
+{
+    /* tous lien dont l'attribut href contient le mot "amazon" */
+    font-family: monospace;
+}
+a[href$=".fr"]
+{
+    /* tous lien dont l'attribut href termine par le mot ".fr" */
+    background-color: blue;
+}
+a[href^="https"]::before
+{
+    /* tous lien dont l'attribut href commence par le mot "https" */
+    content: "✓";
+}
+
+/* --------------------- bonus --------------------- */
+/* article p, header p */
+:where(article, header) p
+{
+    /* Selectionne tous les p dont le parent est un header ou un article */
+    font-style: italic;
+}
+/* 
+    Par défaut le CSS est lu de haut en bas et chaque selecteur ciblant un même élément viendra réécrire celui qui le précède.
+
+    C'est vrai dans le cas où ils ont le même niveau de spécifique.
+    Celui ci est représenté par 3 chiffres.
+        (0,0,0)
+
+    Le premier chiffre est prioritaire sur les suivant et ainsi de suite
+    par exemple :
+        1,0,0 aura la priorité sur 0,9,9
+        0,1,0 aura la priorité sur 0,0,9
+        0,2,0 aura la priorité sur 0,1,11
+
+    Chaque élément du selecteur augmentera un chiffre spécifique:
+        Un nom de balise (div, header...) fera évoluer le dernier chiffre :
+            main > p vaudra 0,0,2
+        Une classe fera évoluer le second chiffre :
+            div.classeCool vaudra 0,1,1
+        Un id influencera le premier chiffre :
+            span#superSpan vaudra 1,0,1
+*/

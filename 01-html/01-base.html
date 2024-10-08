@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balises de base</title>
+</head>
+<body>
+    <!-- Balises de type bloc, sans effet particulier, présente pour la sémantique -->
+    <header id="haut-page"></header>
+    <footer></footer>
+    <nav></nav>
+    <aside></aside>
+    <!-- Certaines balises n'ont pas d'effet supplémentaire mais des règles à respecter -->
+    <main>
+        <!-- Ne doit apparaître qu'une fois par page -->
+    </main>
+    <!-- Une section ou un article doit contenir une balise de titre -->
+    <section></section>
+    <article></article>
+    <!-- Le p ne doit pas contenir d'autres balises de type bloc, seulement du texte ou des balises inline -->
+    <p>
+        <!-- Le p possède des marges en haut et en dessous -->
+    </p>
+    <pre>
+        <!-- Dans le HTML, les sauts à la ligne, les espaces supplémentaires... ne sont pas pas prit en compte, sauf dans la balise pre -->
+    </pre>
+    <!-- Le bloc par défaut, pas de règle, pas de sémantique, pas d'effet -->
+    <div></div>
+    <!-- Unordored List, ne peut contenir qu'un seul type de balise, possède par défaut une marge au dessu et en dessous, et une marge interne à gauche -->
+    <ul>
+        <!-- Chaque li fera apparaître un nouvel element dans la liste, autrement c'est un bloc classique. -->
+        <li>tomate</li>
+        <li>concombre</li>
+    </ul>
+    <!-- menu est un ul avec un autre nom -->
+    <menu></menu>
+    <!-- Même fonctionnement et règle qu'un ul mais affichage différent, "Ordered List" numérotte les éléments -->
+    <ol>
+        <li>tomate</li>
+        <li>concombre</li>
+    </ol>
+    <!-- 
+        Les balises de titre allant de 1 (la plus importante) à 6 (la moins importante) 
+        Conseillé dans les balises articles et sections.
+        place le texte en gras et change la taille.
+        ajoute une marge au dessus et en dessous
+    -->
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    <!-- Balises inlines -->
+    <p>
+        <!-- 
+            strong et b mettent le texte en gras 
+            Ils ne doivent pas être utilisé pour mettre du texte en gras.
+
+            Strong indique l'importance d'un texte
+            b permet juste de mettre en avant un texte
+        -->
+        <strong>Lorem ipsum dolor sit </strong> 
+        amet 
+        <b>consectetur adipisicing elit.</b> 
+        <!-- br provoque un saut à la ligne -->
+        <br>
+        <!-- 
+            em et i mettent le texte en italique mais ne doivent pas être utilisé à des fin stylistique 
+
+            em indique que l'on veut mettre l'emphase sur un texte.
+            i indique une citation, un terme technique ou autre.
+        -->
+        <em>At in, cum laboriosam quis esse et</em> 
+        dolorum 
+        <i>harum earum minus inventore cupiditate</i> 
+        ipsam 
+        <!-- permet de souligner un élément mais ne doit pas être utilisé pour cela.
+        souligner un élément qui pour une raison sort du reste du texte, nom propre, faute d'ortographe... -->
+        <u>amet dignissimos velit hic</u> 
+        similique laborum totam aperiam.
+    </p>
+    <!-- affiche une ligne de séparation -->
+    <hr>
+    <menu>
+        <!-- 
+            La balise d'ancre (a) permet de créer des liens
+                Ils peuvent être interne au site
+                externe, menant vers d'autre sites
+                ou interne à la page elle même (#)
+
+            dans le cas d'un lien externe, on l'accompagnera souvent de l'attribut "target='_blank'" qui permet d'ouvrir le lien vers un nouvel onglet.
+
+            Il est aussi possible d'indiquer un "id" sur un élément de la page, et créer un lien vers celui ci.
+        -->
+        <li><a href="index.html">fichier header</a></li>
+        <li><a href="https://www.google.fr/search?q=pizza" target="_blank">PIZZA !</a></li>
+        <li><a href="#haut-page">EN HAUT !</a></li>
+    </menu>
+    <!-- Le span est l'élément inline par défaut, aucune règle, aucun effet -->
+    <span></span>
+    <!-- 
+        La balise img permet l'affichage d'une image.
+        l'attribut src indique la source de l'image
+        l'attribut alt permet de décrire l'image aux robots et synthèse vocal ainsi qu'afficher un message si l'image ne s'affiche pas.
+
+        Par défaut l'image s'affiche avec sa taille réelle, 
+        On pourra la redimensionné soit en CSS,
+        soit avec les attributs width et height
+    -->
+    <img src="logo_html.png" alt="logo html 5" width="200">
+    <!-- 
+        La balise video qui prendra obligatoirement l'attribut "src" pour indiquer la vidéo à charger
+        Et on pourra y ajouter au choix les attributs suivant :
+        * "controls" pour afficher les boutons du lecteur
+        * "loop" si on veut que la vidéo se relance à la fin
+        * "autoplay" pour lancer la vidéo automatique, mais ne fonctionnera que si il n'y a pas de son
+        * "muted" pour couper le son par défaut
+        * "poster" si on veut afficher une image de présentation
+    -->
+    <video src="tortue.mp4" width="300" controls loop autoplay muted poster="logo_html.png"></video>
+    <!-- Permet d'intégrer une page dans une autre (exemple lors de l'ajout d'une carte style google map) -->
+    <iframe src="./index.html"></iframe>
+    <!-- Quelques attributs généraux -->
+    <!-- 
+        L'id peut aller sur n'importe quelle balise.
+            Il ne doit pas comporter d'espace ou commencer par un chiffre
+            Une balise ne peut avoir qu'un seul id
+            Un id doit être unique dans la page
+        L'attribut classe peut aller n'importe où aussi,
+            Il ne doit pas comporter d'espace ou commencer par un chiffre
+            Un espace dans un attribut classe indiquera le commencement d'une nouvelle classe
+    -->
+    <span id="superSpan" class="span1 span-test" title="span de test pour montrer les attributs">super span</span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau HTML</title>
+    <style>
+        table, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- Un tableau commence forcément par une balise "table" -->
+    <table>
+        <!-- tr représente une "table row" -->
+        <tr>
+            <!-- td représente une "table data"(une case) -->
+            <td>banane</td>
+            <td>cerise</td>
+        </tr>
+        <!-- chaque tr doit contenir le même nombre de case -->
+        <tr>
+            <td>tomate</td>
+            <td>framboise</td>
+        </tr>
+    </table>
+    <hr>
+<!-- Second tableau plus complexe -->
+    <table>
+        <!-- légende du tableau -->
+        <caption>
+            Liste de fruit et légume
+        </caption>
+        <!-- L'entête du tableau -->
+        <thead>
+            <tr>
+                <!-- th représente un titre d'une colonne, et met le texte en gras et centré
+                colspan permet de fusionner des colonnes -->
+                <th colspan="2">Fruit</th>
+                <th colspan="2">Légume</th>
+            </tr>
+        </thead>
+        <!-- Le corps du tableau -->
+        <tbody>
+            <tr>
+                <td>banane</td>
+                <td>cerise</td>
+                <td>concombre</td>
+                <!-- rowspan permet de fusionner des rangés -->
+                <td rowspan="2">carotte</td>
+            </tr>
+            <tr>
+                <td>pomme</td>
+                <td colspan="2">tomate</td>
+            </tr>
+        </tbody>
+        <!-- Pied tu tableau -->
+        <tfoot>
+            <tr>
+                <td colspan="4">Mangez 5 fruit et légume par jour</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

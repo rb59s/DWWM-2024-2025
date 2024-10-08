@@ -1,0 +1,155 @@
+/* Import d'une police d'écriture */
+@font-face {
+    /* Le nom que l'on donne à la police */
+    font-family: Jacquarda;
+    /* Le chemin vers le fichier contenant la police */
+    src: url(./JacquardaBastarda9-Regular.ttf);
+}
+/* Selectionne la racine du document (par défaut est la balise "html") */
+:root
+{
+    /* 
+        Par défaut, certaines propriétés sont appliquées à tous les éléments descendant.
+        Par exemple en mettant la font-size sur l'élément racine, tous les éléments de la page se verront modifié 
+    */
+    font-size: 18px;
+    /* 
+        Une variable CSS est une propriété dans laquelle nous allons pouvoir sauvegarder une valeur.
+        Et appliqué celle ci à tous les éléments souhaités.
+        Sont nom commence forcément par "--" puis elle peut être appelé comme on le souhaite.
+    */
+    --main-background-color: lightblue;
+    --mainTextColor: brown;
+    --div-size: 10px;
+}
+.target1
+{
+    /* 
+        font-family permet de changer la police d'écriture
+        On peut utiliser une police par défaut ou en importer une avec @font-face.
+        C'est une bonne pratique de lister plusieurs polices, dans le cas où la première ne serait pas géré, la suivante serait utilisé.
+    */
+    font-family: Jacquarda,'Courier New', Courier, monospace;
+    /* 
+        Pour utiliser une variable CSS, on appellera la fonction "var()" 
+        Dans laquelle on placera le nom de la variable voulue.
+    */
+    background-color: var(--main-background-color);
+    color: var(--mainTextColor);
+    font-size: var(--div-size);
+}
+body
+{
+    /* 
+        Par défaut la taille du body est celle d'un block classique.
+        C'est à dire, toute la largeur, et en hauteur juste son contenu.
+        Mais une exception s'applique, sur un background-color, celui ci passera sur toute la page.
+    */
+    background-color: gray;
+}
+.target2
+{
+    background-color: var(--main-background-color);
+}
+.target3
+{
+    /* 
+        Il est possible de générer des couleurs de différentes manières.
+        Par les mots clefs, mais aussi avec la fonction rgb
+        Celle ci prendra 3 valeurs représentant le niveau de rouge, vert et bleu de la couleur.
+        Ces valeurs allant de 0 à 255
+    */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.target4
+{
+    background-color: rgb(37, 216, 162);
+    /* rgba prendra une quatrième valeur entre 0 et 1 pour gérer la transparence */
+    color: rgba(0, 0, 0, 0.5);
+}
+.target5
+{
+    /* 
+        On peut définir la couleur en hexadecimal avec 6 chiffres précédé d'un "#"
+        Les deux premiers pour le rouge, 
+        les deux suivant pour le vert,
+        les deux derniers pour le bleu
+        Cees chiffres allant de 00 à FF
+    */
+    background-color: #000000;
+    color: #ffffff;
+}
+.target6
+{
+    background-color: #12f0C6;
+    /* On peut gérer la transparence en ajoutant une paire de chiffre. */
+    color: #00000080;
+}
+.target7
+{
+    /* 
+        On peut aussi utiliser la fonction hsl qui prendra :
+        Une valeur entre 0 et 360 pour indiquer la position sur la roue chromatique
+        Un pourcentage pour indiquer la saturation de la couleur
+        Un pourcentage pour indiquer le niveau de brillance
+    */
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(360, 100%, 100%);
+}
+.target8
+{
+    background-color: hsl(160, 81%, 49%);
+    /* La variante hsla peut prendre une quatrième valeur entre 0 et 1 pour la transparence */
+    color: hsla(0, 0%, 0%, 0.5);
+    /* L'unité classiquement utilisé est le pixel, mais il en existe beaucoup d'autre */
+    font-size: 24px;
+}
+.target9
+{
+    /* "em" signifie "n" fois la taille de l'élément parent */
+    font-size: 1.8em;
+}
+.target10
+{
+    /* "rem" signifie "n" fois la taille de l'élément "racine" */
+    font-size: 1.8rem;
+}
+.target2
+{
+    /* "vw" pour "viewport width", c'est un pourcentage de la largeur du viewport */
+    font-size: 5vw;
+}
+.target3
+{
+    /* "vh" pour "viewport height", c'est un pourcentage de la hauteur du viewport */
+    font-size: 10vh;
+}
+.target4
+{
+    /* "vmin" pour "viewport minimum", c'est un pourcentage de la dimension la plus petite entre la hauteur et la largeur */
+    font-size: 10vmin;
+    /* 
+        On trouvera aussi "vmax"
+        Ou d'autres variantes comme "dvh", "dvw".... 
+    */
+}
+.target5
+{
+    /* Un pourcentage de la taille du parent pour la même propriété */
+    font-size: 50%;
+}
+.target6
+{
+    /* Certaines valeurs comme le "cm" ou le "pc" sont plus adaptés à l'impression qu'à un site */
+    font-size: 1cm;
+}
+.target7
+{
+    /* 
+        la fonction clamp permet d'avoir une taille adaptable mais avec des limites.
+        Elle prendra 3 valeurs.
+        Une taille minimum, une taille variable, et une taille maximum 
+    */
+    font-size: clamp(20px, 5vw, 40px);
+}

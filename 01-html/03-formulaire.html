@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire HTML</title>
+</head>
+<body>
+    <!-- 
+    les formulaires se trouvent toujours dans une balise form, celle ci prendra souvent deux attributs
+        * action qui indique vers quel page envoyer les données du formulaire.
+        * method qui indique la méthode à utiliser pour l'envoi de donnée (généralement get ou post)
+    -->
+    <form action="https://www.google.fr/search" method="get">
+        <!-- L'input représente l'élément de base d'un formulaire, son type indique son rôle avec par défaut le type "text"
+        Chaque champs d'un formulaire doit avoir un name différent.
+        Le placeholder permet d'avoir un texte qui s'efface directement lorsque l'utilisateur tape dans l'input 
+        -->
+        <input type="text" name="q" placeholder="Votre Recherche">
+        <!-- Le bouton de type submit permet de soumettre (envoyer) le formulaire -->
+        <button type="submit">Rechercher</button>
+    </form>
+    <hr>
+    <form action="03-formulaire.html" method="get">
+        <!-- 
+            Le label permet de décrire un champ,
+            si l'attribut for, correspond à l'id d'un champ,
+            alors les deux sont liée et cliquer sur le label mettra le focus sur le champ
+        -->
+        <label for="firstname">Prénom</label>
+        <!-- L'attribut autofocus permet d'avoir le focus sur l'élément dès le chargement de la page 
+        l'attribut required force l'utilisateur à remplir le champ pour pouvoir valider le formulaire.
+        -->
+        <input type="text" name="prenom" id="firstname" autofocus required>
+        <br>
+        <!-- Le type date génère un choix de date avec calendrier -->
+        <label for="birthday">Date de naissance</label>
+        <input type="date" name="birthday" id="birthday">
+        <br>
+        <!-- le type email va vérifier si la valeur entrée a une syntaxe d'email -->
+        <label for="email">Votre Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <!-- type password Cache les caractères entrés par l'utilisateur -->
+        <label for="pass">Votre mot de passe</label>
+        <input type="password" name="pass" id="pass">
+        <br>
+        <!--type file Permet l'upload de fichier -->
+        <label for="cv">Votre CV</label>
+        <input type="file" name="cv" id="cv">
+        <br>
+        <!--Type hidden Permet l'envoi d'informations cachées -->
+        <input type="hidden" name="secret" value="truc caché">
+        <!-- le textarea permet d'écrire sur plusieurs lignes -->
+        <label for="commentaire">Un commentaire ?</label>
+        <textarea name="commentaire" id="commentaire"></textarea>
+        <hr>
+        <!-- fieldset permet d'encadre un ou plusieurs champs d'un formulaire -->
+        <fieldset>
+            <!-- Permet l'ajout d'un titre au fieldset -->
+            <legend>Quels catégories appréciez vous ?</legend>
+            <!-- le type checkbox permet la création d'une case à cocher -->
+            <input type="checkbox" name="aventure" id="aventure">
+            <label for="aventure">Vive l'aventure</label>
+            <br>
+            <!-- l'attribut checked permet de cocher la case par défaut -->
+            <input type="checkbox" name="romantique" id="romantique" checked>
+            <label for="romantique">Vive la romance</label>
+            <br>
+            <!-- Par défaut, une case coché envoi la valeur "on" et rien du tout si elle n'est pas coché.
+            On pourra changer cette valeur avec l'attribut "value" -->
+            <input type="checkbox" name="horreur" id="horreur" value="horreur">
+            <label for="horreur">Vive l'horreur</label>
+        </fieldset>
+        <fieldset>
+            <legend>Choisissez un langage</legend>
+            <!-- Le type radio permet la création d'une case à cocher ronde, qui ne sera pas décochable. -->
+            <input type="radio" name="langage" id="html">
+            <label for="html">HTML est un vrai langage</label>
+            <br>
+            <!-- Si plusieurs radio portent le même nom, alors en cocher un autre, décochera le précédent -->
+            <input type="radio" name="langage" id="css">
+            <label for="css">Le CSS n'est pas si difficile</label>
+            <br>
+            <!-- Il est conseillé de mettre une value à tout les types radio, car sinon peu importe celui coché, on aura la valeur "on" -->
+            <input type="radio" name="langage" id="js">
+            <label for="js">Le Javascript pour dynamiser</label>
+            <br>
+        </fieldset>
+        <label for="repas">Choisi ton repas</label>
+        <!-- Le select permet de créer une liste à choix -->
+        <select name="repas" id="repas">
+            <!-- Chaque choix possible est représenté par une balise option -->
+            <option value="pizza">Pizza à l'ananas</option>
+            <!-- Pour avoir un choix selectionné par défaut, on peut utiliser l'attribut "selected" -->
+            <option value="pasta" selected>Spaghetti en morceau</option>
+            <!-- L'information envoyé, est celle en "value" -->
+            <option value="burger">burger mcdo</option>
+        </select>
+        <!-- comme le bouton de type submit, il permet la soumission du formulaire -->
+        <input type="submit" value="Envoyer">
+        <!-- Bouton que l'on pourrait rendre utile grâce à JS mais actuellement ne fait rien -->
+        <input type="button" value="Clique moi !">
+    </form>
+</body>
+</html>

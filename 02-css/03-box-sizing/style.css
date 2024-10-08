@@ -1,0 +1,97 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    /* 
+        Par défaut lorsque l'on donne une hauteur ou une largeur à un élément HTML, celle ci est basé sur sa boîte de contenu,
+        On viendra ajouter à celle ci, son padding et sa bordure.
+        En indiquant box-sizing: border-box, le padding et la bordure seront inclus dans la taille indiquée.
+    */
+    box-sizing: border-box;
+}
+header
+{
+    background-color: aqua;
+    /* Permet d'utiliser une image de fond, elle passera forcément devant la couleur */
+    background-image: url("./logo_html.png");
+    /* Permet d'indiquer à l'image de ne pas se répéter */
+    background-repeat: no-repeat;
+    /* 
+        Permet de définir la taille du fond, 
+        On peut aussi utiliser les mots clef "contain" ou "cover" pour automatiser la taille  
+    */
+    background-size: contain;
+    /* Positionne l'image */
+    background-position: right;
+}
+main
+{
+    background-color: palevioletred;
+}
+article
+{
+    /* largeur d'un élément */
+    width: 45%;
+    /* display d'un élément (block, inline, inline-block et autres que l'on verra plus tard) */
+    display: inline-block;
+
+    /* border-color: black;
+    border-style: solid;
+    border-width: 3px; */
+    border: 3px solid black;
+    /* padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px; */
+    /* padding: 5px 10px 5px 10px; */
+    /* ? marge interne à l'élément (avant la bordure) */
+    padding: 5px 10px;
+    /* ? marge externe à l'élément (après la bordure) */
+    margin: 20px auto 20px 5px;
+}
+h1
+{
+    text-align: center;
+    /* pareil que  padding: 0.8em 0.1em;*/
+    padding: .8em .1em;
+}
+div
+{
+    width: 40vw;
+    /* Si l'élément ne fait pas toute la largeur de son parent, un margin auto à gauche et à droite le centrera */
+    margin: 5px auto;
+    /* Donne une hauteur maximum à ne pas dépasser */
+    max-height: 80vh;
+    /* On trouvera aussi l'inverse avec "min-height" */
+}
+img
+{
+    width: 100%;
+    height: 20vh;
+    /* Fonctionne comme le background-size mais pour les balises img */
+    object-fit: cover;
+    /* Fonctionne comme le background-position mais pour les balises img */
+    object-position: bottom;
+}
+footer
+{
+    background-color: chartreuse;
+    min-height: 50px;
+}
+li
+{
+    display: inline-block;
+    background-color: aqua;
+    /* 
+        Adapte la hauteur de l'élément selon le ratio avec la largeur de celui ci. 
+        1/1 indique que l'on veut la même hauteur que la largeur.
+    */
+    aspect-ratio: 1/1;
+    padding: 1rem 5px;
+    margin-left: 15%;
+    /* 
+        Permet d'arrondir les angles d'un élément,
+        à 50% on obtient un cercle
+    */
+    border-radius: 50%;
+}

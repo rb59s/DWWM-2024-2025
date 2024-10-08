@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les selecteurs CSS</title>
+    <style>
+        h1{
+            background-color: chartreuse;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header>(h1>a>{Super Site Grandiose !})+p>{Ce site est vraiment super !} -->
+    <header style="background-color: blueviolet;">
+        <h1>
+            <a href="https://www.google.fr/search?q=carbonade" target="_blank">
+                Super Site Grandiose !
+            </a>
+        </h1>
+        <p>
+            Ce site est vraiment super !
+        </p>
+    </header>
+    <!-- main>(p>abbr+span*3+lorem)+article>p>{Gros article très long} -->
+    <main>
+        <p>
+            <abbr title="Cascading Style Sheet">CSS</abbr> Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Tempore, atque illum  inventore aliquid ex, placeat</span>, quibusdam iure <span>facilis animi doloribus</span> error maiores pariatur  <span>dolor? Animi quos deserunt</span> nemo assumenda quidem?
+        </p>
+        <article>
+            <p>
+                Gros article très long
+            </p>
+        </article>
+    </main>
+    <!-- footer>(h3>{Gros Menu})+ul>li*6>{Menu $} -->
+    <footer>
+        <h3>
+            Gros Menu
+        </h3>
+        <ul>
+            <li id="MenuImportant">
+                Menu 1
+            </li>
+            <li>
+                <a href="https://www.amazon.fr">Amazon</a>
+            </li>
+            <li class="peuImportant">
+                Menu 3
+            </li>
+            <li>
+                <a href="https://www.marquiset.fr">Nolwenn</a>
+            </li>
+            <li class="peuImportant">
+                Menu 5
+            </li>
+            <li>
+                <a href="https://fr.wikipedia.org/wiki/amazonie">Wikipedia</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
