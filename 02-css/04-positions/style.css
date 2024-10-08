@@ -1,0 +1,77 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 400vh;
+}
+img
+{
+    width: 100px;
+}
+header
+{
+    padding: 1rem;
+    background-color: slategray;
+    color: antiquewhite;
+    text-align: center;
+    /* 
+        En position fixed, l'élément sort du flow de la page.
+        C'est à dire que son emplacement dans la page disparaît et qu'il survole le reste.
+        L'élément est alors fixé au viewport, il restera visible même si on scroll.
+    */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+nav, main 
+{
+    margin-top: 50px;
+    display: inline-block;
+    height: 100%;
+    padding: 2rem;
+}
+nav
+{
+    height: 50%;
+    width: 200px;
+    background-color: darkseagreen;
+}
+nav ul
+{
+    /* 
+        En position sticky, l'élément se déplacera dans son parent, dès que la limite indiqué par les propriétés (top, left, bottom ou right) sera atteinte.
+    */
+    position: sticky;
+    top: 70px;
+}
+main
+{
+    width: calc(100% - 210px);
+    background-color: mediumseagreen;
+    /* 
+        En relative, l'élément gardera son emplacement d'origine occupé,
+        peu importe où il sera déplacé. 
+        Son déplacement se fait par rapport à sa position d'origine
+    */
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+button
+{
+    /* 
+        En position absolute, l'élément sort du flow de la page
+        Puis est positionné par rapport à son parent positionné le plus proche.
+    */
+    position: absolute;
+    top: 150px;
+    left: 5px;
+}
+img
+{
+    float: left;
+}
