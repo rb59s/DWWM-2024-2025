@@ -71,3 +71,30 @@ button
     top: 150px;
     left: 5px;
 }
+img
+{
+    float: left;
+    border-radius: 50%;
+    shape-outside: margin-box;
+    margin: 5px;
+}
+main
+{
+    /* background-image: linear-gradient(70deg, purple 70%, chartreuse, #57C2A8, rgb(156, 79, 32)); */
+    background: linear-gradient(to right, blue 33%, white 33%, white 66%, red 66%) no-repeat center/100px ;
+    /* background: linear-gradient(to right, blue, white, white, red); */
+}
+header
+{
+    background-image: url("../03-box-sizing/logo_html.png"), url("../03-box-sizing/ville.jpg");
+    background-size: contain, cover;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+button
+{
+    /* Déjà en position absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
