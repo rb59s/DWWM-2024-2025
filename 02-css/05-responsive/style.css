@@ -1,0 +1,52 @@
+body
+{
+    background-color: bisque;
+    margin: 0;
+}
+h1, h2
+{
+    text-align: center;
+}
+article
+{
+    margin: 1rem, 10px;
+    border: 1px solid grey;
+    padding: 0.5rem;
+}
+/* 
+    Les média queries permettent d'appliquer des règles à certaines conditions.
+    Ici par exemple j'indique que les règles suivantes s'appliquent uniquement pour un écran d'au moins 600px
+*/
+@media screen and (min-width: 600px) 
+{
+    body
+    {
+        background-color: lightgreen;
+    }
+    article
+    {
+        display: inline-block;
+        width: 45%;
+    }
+}
+@media screen and (min-width: 900px) 
+{
+    body
+    {
+        background-color: lightblue;
+    }
+    article
+    {
+        width: 30%;
+    }
+}
+/* Largeur de l'écran inferieur à 700 */
+@media screen and (max-width: 700px) {}
+/* Règles à appliquer en cas d'impression */
+@media print{}
+/* écran au format paysage ou portrait */
+@media screen and (orientation: landscape){}
+@media screen and (orientation: portrait){}
+/* détecte si le navigateur est en mode light ou dark */
+@media (prefers-color-scheme: dark){}
+@media (prefers-color-scheme: light){}
