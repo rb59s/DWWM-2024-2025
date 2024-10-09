@@ -1,0 +1,57 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(238, 238, 238);
+    font-size: 40px;
+}
+/* version Pc */
+li {
+    margin-top: 5px
+}
+li a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 200px 0px 20px;
+}
+li a:hover {
+    background-color: black;
+    color: white;
+}
+button {
+    display: none;
+}
+/* version tablette */
+@media screen and (max-width: 800px) {
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    li {
+        display: inline-block;
+        font-size: 0.8em;
+    }
+    li a {
+        padding: 0px 10px 0px 10px;
+    }
+}
+/* version mobile */
+@media screen and (max-width: 600px) {
+    ul {
+        display: block;
+        margin-left: 100px;
+    }
+    li {
+        display: block;
+    }
+    button {
+        display: flex;
+        float: right;
+        padding: 5px;
+        background-color: white;
+        font-size: 20px;
+    }
+}
