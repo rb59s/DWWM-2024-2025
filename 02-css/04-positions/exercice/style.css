@@ -1,0 +1,40 @@
+
+
+body {
+    background: linear-gradient(to right, #904E95, #E96443);
+}
+
+.circlebase {
+    display: flex;
+    justify-content: center;
+}
+
+.circle1{
+    background-color: white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top:25%;
+    position: relative;
+    left: 95px;
+}
+
+.circle2{
+    background-color: white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top:20%;
+    position: relative;
+    bottom: 5px;
+}
+
+.circle3{
+    background-color: white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top:25%;
+    position: relative;
+    right: 95px;
+}
