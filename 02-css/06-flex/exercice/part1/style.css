@@ -1,0 +1,108 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .blockcolor{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        height: 100vh;
+    }
+    .bleu{
+        background-color: blue;
+        width: 48%;
+    }
+    .vert{
+        background-color: green;
+        width: 48%;    
+    }
+
+    .orange{
+        background-color: orange;
+        width: 48%;    
+    }
+    .rose{
+        background-color: purple;
+        width: 48%;
+    }
+    .darkbleu{
+        background-color: rgb(28, 28, 83);
+        width: 48%;    
+    }
+    .yellow{
+        background-color: yellow;
+        width: 48%;  
+    }
+    .marron{
+        background-color: brown;
+        width: 48%;  
+    }
+    .gris{
+        background-color: gray;
+        width: 48%;    
+    }
+@media screen and (min-width:701px) {
+    
+    .blockcolor{
+        gap: 0px;
+    }
+    .bleu{
+        width: 25%;
+    }
+    .vert{
+        width: 25%;    
+    }
+    .orange{
+        width: 25%;    
+    }
+    .rose{
+        width: 25%;
+    }
+    .darkbleu{
+        width: 25%;    
+    }
+    .yellow{
+        width: 25%;  
+    }
+    .marron{
+        width: 25%;  
+    }
+    .gris{
+        width: 25%;    
+    }
+}
+
+@media screen and (min-width:1023px) {
+    
+    .blockcolor{
+    }
+    .bleu{
+        width: 12.5%;
+    }
+    .vert{
+        width: 12.5%;    
+    }
+
+    .orange{
+        width: 12.5%;    
+    }
+    .rose{
+        width: 12.5%;
+    }
+    .darkbleu{
+        width: 12.5%;    
+    }
+    .yellow{
+        width: 12.5%;  
+    }
+    .marron{
+        width: 12.5%;  
+    }
+    .gris{
+        width: 12.5%;    
+    }
+}
+
+
+

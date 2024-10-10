@@ -1,0 +1,49 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.block{
+    display: block;
+    width: 100%;
+}
+.violet{
+    background-color: purple;
+    height: 20vh;
+}
+.bleu{
+    background-color: blue;
+    height: 40vh;
+}
+.vert{
+    background-color: green;
+    height: 20vh;
+}
+.orange{
+    background-color: orange;
+    height: 20vh;
+}
+    @media screen and (min-width:700px) {
+        .block{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;  
+        }
+        .violet{
+            background-color: purple; 
+            width: 100%;   
+        }
+        .bleu{
+            background-color: blue;
+            width: 75%;  
+        }
+        .vert{
+            background-color: green;
+            width: 25%;
+            height: 40vh;    
+        }
+        .orange{
+            background-color: orange;
+            width: 100%;      
+        }    
+    }
