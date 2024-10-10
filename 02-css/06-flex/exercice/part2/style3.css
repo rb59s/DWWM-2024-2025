@@ -1,0 +1,130 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .blockcolor{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    .bleu{
+        background-color: blue;
+        height: 11.1vh;    }
+    .vert{
+        background-color: green;
+        height: 11.1vh;   
+    }
+    .orange{
+        background-color: orange;
+        height: 11.1vh;   
+    }
+    .rose{
+        background-color: purple;
+        height: 11.1vh;    }
+    .darkbleu{
+        background-color: rgb(28, 28, 83);
+        height: 11.1vh;   
+    }
+    .yellow{
+        background-color: yellow;
+        height: 11.1vh; 
+    }
+    .marron{
+        background-color: brown;
+        height: 11.1vh; 
+    }
+    .gris{
+        background-color: gray;
+        height: 11.1vh;   
+    }
+    .black{
+        background-color: rgb(0, 0, 0);
+        height: 11.1vh;   
+    }
+    @media screen and (min-width: 701px){
+        .blockcolor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+        .bleu{
+            width: 50%; 
+            height: 20vh;
+           }
+        .vert{
+            width: 50%;  
+            height: 20vh; 
+        }
+        .orange{
+            width: 50%; 
+            height: 20vh;  
+        }
+        .rose{
+            width: 50%; 
+            height: 20vh;   }
+        .darkbleu{
+            width: 100%;
+            height: 20vh;   
+        }
+        .yellow{
+            width: 50%; 
+            height: 20vh;
+        }
+        .marron{
+            width: 50%; 
+            height: 20vh;
+        }
+        .gris{
+            width: 50%; 
+            height: 20vh;  
+        }
+        .black{
+            width: 50%; 
+            height: 20vh;  
+        }   
+    }
+    @media screen and (min-width: 1001px){
+        .blockcolor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+        .bleu{
+            width: 25%; 
+            height: 33.3vh;
+           }
+        .vert{
+            width: 25%;  
+            height: 33.3vh;
+        }
+        .orange{
+            width: 25%; 
+            height: 33.3vh;  
+        }
+        .rose{
+            width: 25%; 
+            height: 33.3vh;   }
+        .darkbleu{
+            width: 100%;
+            height: 33.3vh;  
+        }
+        .yellow{
+            width: 25%; 
+            height: 33.3vh;
+        }
+        .marron{
+            width: 25%; 
+            height: 33.3vh;
+        }
+        .gris{
+            width: 25%; 
+            height: 33.3vh;  
+        }
+        .black{
+            width: 25%; 
+            height: 33.3vh; 
+        }
+    }
