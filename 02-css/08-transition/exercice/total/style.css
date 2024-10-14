@@ -1,0 +1,108 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 100vh;
+}
+
+.B1 button{
+    width: 100px;
+    height: 50px;
+    border: 3px solid gray;
+    color: gray;
+    background-color: lightgrey;
+    cursor: pointer;
+    transition: all 2s linear;
+}
+
+.B1 button:hover{
+    border:3px solid red;
+    color: red;
+    background-color: #fadede;
+    transition-property: background-color, color, border;
+    transform: rotateY(360deg);
+    transition-duration: 1s;
+}
+
+.B2 button{
+    width: 150px;
+    height: 50px;
+    background-color: orangered;
+    border: 3px solid orangered;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: orangered;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.B2 button:hover{
+    border: 3px solid white;
+}
+
+.B2 button:hover span{
+    transform: rotateZ(360deg);
+    background-color: white;
+    color: orangered;
+}
+
+.B3 button{
+    width: 150px;
+    height: 50px;
+    background-color: #ff3ca6 ;
+    color: white;
+    box-shadow: 10px 10px 5px gray;
+    border-radius: 15px;
+    border: 1px solid #ff3ca6;
+}
+
+.B3 button:hover{
+    transform: translateY(2px);
+    transition-duration: 0.5s;
+    box-shadow: 5px 5px 2px gray;
+    cursor: pointer;
+}
+
+.B3 button:active{
+    transform: translateY(2px) rotateX(360deg);
+    transition-duration: 1s;
+}
+
+.B4 button{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: #6319c3 ;
+    font-size: larger;
+    border: none;
+}
+
+.B4 button:hover{
+    color: black;
+    border-top: 3px solid #6319c3;
+    border-bottom: 3px solid #6319c3;
+    transition-duration: 1s;
+}
+
+
+
+
