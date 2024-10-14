@@ -1,0 +1,96 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul
+{
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    /* 
+        Liste des propriétés qui doivent subir une transition
+        "obligatoire"
+    */
+    transition-property: left;
+    /* Durée des transitions "obligatoire" */
+    transition-duration: 2s;
+    /* Durée avant d'activé la transition "optionnel" */
+    transition-delay: 0.5s;
+    /* rythme auquel la transition doit s'effectuer "optionnel" */
+    transition-timing-function:cubic-bezier(0,1.4,1,-0.29);
+}
+li
+{
+    margin: 1rem 0;
+    display: inline-block;
+}
+button
+{
+    font-size: 3rem;
+    aspect-ratio: 1/1;
+}
+input#burger
+{
+    display: none;
+}
+input#burger:checked ~ ul
+{
+    left: 50%;
+}
+
+li:nth-child(1) button
+{
+    background-color: chartreuse;
+    /* Je peux selectionner plusieurs propriétés */
+    transition-property: background-color, transform;
+    /* Indiquer une durée différente pour chacune */
+    transition-duration: 1s, 2s;
+    /* Ou bien la même durée pour les deux */
+    transition-delay: 0.5s;
+}
+li:nth-child(1) button:hover
+{
+    background-color: darkviolet;
+    transform: rotate(360deg);
+    /* transform: rotateX(360deg); */
+    /* transform: rotateY(360deg); */
+    /* transform: rotateZ(360deg); */
+    /* transform: rotateZ(360deg) rotateY(360deg); */
+}
+li:nth-child(2) button
+{
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: steps(5, jump-start);
+    /* transition-timing-function: steps(5, jump-end); */
+}
+li:nth-child(2) button:hover
+{
+    border-radius: 50%;
+}
+li:nth-child(3) button
+{
+    /* 
+        transition regroupe les différentes propriétés de transition.
+        La première durée est forcément la "duration"
+        La seconde durée est le "delay"
+    */
+    transition: all 1s 0.5s linear;
+}
+li:nth-child(3) button:active
+{
+    box-shadow: 10px 50px 10px 50px red;
+}
+li:nth-child(4) button
+{
+    transition: transform 1s linear;
+}
+/* li:nth-child(4) button:hover */
+li:nth-child(4):hover button
+{
+    transform: scale(0.5);
+    /* transition: transform 1s linear; */
+}
