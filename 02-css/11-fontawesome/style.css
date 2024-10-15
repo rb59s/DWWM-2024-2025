@@ -1,0 +1,18 @@
+/* Si les logos sont en svg ou en img alors on pourra changer sa taille directement via "width" ou "height" */
+img, svg
+{
+    width: 50px;
+}
+/* Si ils sont importé via fontawesome, alors ils seront traité comme une police d'écriture */
+i
+{
+    font-size: 50px;
+}
+img, svg, i
+{
+    color: green;
+    /* Il est possible de changer les couleurs d'un svg avec stroke ou/et fill */
+    stroke: blue;
+    fill: blue;
+    /* Si le svg est chargé via une balise img, il faudra aller modifier directement le fichier */
+}
