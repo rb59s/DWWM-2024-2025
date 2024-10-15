@@ -1,0 +1,38 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    
+    background-color: black;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+}
+div{
+    display: inline-block;
+    white-space: nowrap;
+    color: whitesmoke;
+    font-size: 50px;
+
+    animation-name: h1;
+    animation-duration: 10s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+span::after{
+    content: "Adnam is the best Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem iure repudiandae suscipit quasi dolore, natus temporibus accusantium repellendus quis eveniet possimus illo quo quibusdam vero harum alias ipsam officia!";
+}
+
+@keyframes h1{
+    0% {
+        transform: translateX(0); 
+      }
+      100% {
+        transform: translateX(-50%); 
+      }
+}
