@@ -3,7 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* TODO Keyframes */
+/* On peut définir une animation via la @rule nommé @keyframes suivi du nom que l'on 
+souhaite donner à l'animation. */
+@keyframes cloud {
+    /* from ou 0% est le point de départ de l'animation */
+    from{
+        right: -30vw;
+        height: 5px;
+        width: 5px;
+    }
+    /* Entre le point de départ et le point d'arrivé de l'animation, on peut déclarer 
+    autant d'étape que souhaité, css calculera comment faire le lien entre ces différentes 
+    étapes. (par exemple ici, on dit qu'à 30% de l'animation, l'élément doit être à top: 100vh;) */
+    30%{
+        top: 100vh;
+    }
+    70%{
+        top: 100px;
+    }
+    90%{
+        height: 50px;
+        width: 50px;
+    }
+    /* to ou 100% est le point d'arrivé de l'animation. */
+    to{
+        right: 100vw;
+        height: 250px;
+        width: 250px;
+    }
+}
+@keyframes darkCloud {
+    0%{
+        background-color: grey;
+    }
+    50%{
+        background-color: white;
+    }
+    100%{
+        background-color: grey;
+    }
+}
 body{
     height: 100vh;
     overflow: hidden;
@@ -15,11 +54,25 @@ body{
 .cloud{
     position: absolute;
     top: 50%;
-    left: 50%;
+    /* left: 50%; */
     transform: translate(-50%, -50%);
     width: 150px;
     height: 150px;
     /* TODO animation */
+    /* Permet d'indiquer le nom du @keyframes à utiliser */
+    animation-name: cloud;
+    /* En combien de temps doit se dérouler la totalité de l'animation */
+    animation-duration: 10s;
+    /* Si l'animation doit se jouer dans le sens normal, inverse, ou bien alterner */
+    animation-direction: normal;
+    /* Le rythme de l'animation doit il varier */
+    animation-timing-function: ease-in;
+    /* Un délai avant de commencer l'animation */
+    animation-delay: 0.5s;
+    /* Combien de fois doit se jouer l'animation */
+    animation-iteration-count: infinite;
+    /* Indique la position final de l'élément animé */
+    animation-fill-mode: forwards;
 }
 .cloud div{
     position: absolute;
@@ -27,7 +80,8 @@ body{
     height: inherit;
     border-radius: 50%;
     background-color: whitesmoke;
-    /* TODO Animation */
+    /* animation permet de regrouper toute les propriétés d'animation */
+    animation: darkcloud 3s linear infinite;
 }
 .part1{
     top: -35%;
@@ -39,6 +93,11 @@ body{
     left: -35%;
 }
 /* ------------------ SCROLL ------------------- */
+/* Cette propriété est en cours de développement, 
+Certains navigateurs peuvent ne pas la gérer par défaut.
+Elle permet de remplacer le temps de déroulé d'une animation par le scrolling de la page ou d'un autre élément.
+le 0% de l'animation correspond au scroll à son début.
+le 100% au scroll à sa fin. */
 body.scroll
 {
     overflow: auto;
@@ -66,6 +125,14 @@ body.scroll
     scale: 0 1;
     transform-origin: left;
     /* TODO Scroll Animation */
+    animation-name: scrollme;
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+    /* 
+        animation-timeline est une nouvelle propriété permettant d'aligner le dérouler de l'animation non plus sur une durée mais sur le scroll.
+        Par défaut il ira s'aligner vers le scroll le plus proche, mais on peut ajouter entre les parenthèses "root" pour le lier à celui du document principal.
+    */
 }
 .scroll .ball
 {
@@ -77,4 +144,36 @@ body.scroll
     width: 20px;
     aspect-ratio: 1/1;
     /* TODO Scroll Animation */
+    animation: scrollus auto linear;
+    animation-timeline:  scroll();
+}
+body.scroll::after
+{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #904E95;
+    /* transform: translateX(300px) rotate(-45deg); */
+    /* transform: rotate(-45deg) translateX(300px); */
+    /* rotate: -45deg;
+    translate: 300px; */
+}
+@keyframes scrollme 
+{
+    from{scale: 0 1;}
+    to{scale: 1 1;}
+}
+@keyframes scrollus 
+{
+    from
+    {
+        left: -20px;
+        rotate: 0;
+    }    
+    to
+    {
+        left: 100vw;
+        rotate: 1440deg;
+    }
 }
