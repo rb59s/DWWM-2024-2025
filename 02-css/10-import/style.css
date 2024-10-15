@@ -1,0 +1,9 @@
+@import url("./css/default.css");
+@import url("./css/header.css");
+@import url("./css/main.css");
+@import url("./css/footer.css");
+@import url("./css/desktop.css") screen and (min-width: 900px);
+/* 
+    Une autre façon de travailler, est de découper son CSS en plusieurs parties et d'importer ces fichiers dans un fichier principal via la @rule "import"
+    Il est aussi possible d'ajouter des media queries à notre import afin de le conditionner.
+*/
