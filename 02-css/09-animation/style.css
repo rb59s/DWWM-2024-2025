@@ -1,0 +1,80 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* TODO Keyframes */
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+.sky{
+    height: 100%;
+    background: linear-gradient(to right, #904E95, #E96443);
+}
+.cloud{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    /* TODO animation */
+}
+.cloud div{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    /* TODO Animation */
+}
+.part1{
+    top: -35%;
+}
+.part2{
+    left: 35%;
+}
+.part3{
+    left: -35%;
+}
+/* ------------------ SCROLL ------------------- */
+body.scroll
+{
+    overflow: auto;
+    height: auto;
+}
+.scroll p
+{
+    margin-bottom: 20vh;
+}
+.scroll header
+{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: lightcyan;
+}
+.scroll .progress
+{
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: green;
+    scale: 0 1;
+    transform-origin: left;
+    /* TODO Scroll Animation */
+}
+.scroll .ball
+{
+    translate: -100% 0;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
+    background-image: radial-gradient(at 30% 30%,  rgba(251,199,199,1), rgba(255,140,105,1));
+    width: 20px;
+    aspect-ratio: 1/1;
+    /* TODO Scroll Animation */
+}
