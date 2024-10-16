@@ -1,0 +1,107 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+position: relative;
+}
+
+div{
+    position: absolute;
+    border-radius: 50%;
+    border-style: dotted;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    margin: 20px;
+    
+    animation-timing-function: linear;
+   
+
+}
+
+.rond1{
+   
+    border-top: 10px solid lightcoral;
+    
+    top: 20px;
+    left: 20px;
+
+    transform: rotateZ(360deg);
+
+    animation-name: rond1 ;
+    animation-duration: 2s  ;
+    animation-direction: normal;
+    animation-iteration-count: infinite ;
+}
+
+.rond2{
+
+    height: 220px;
+    width: 220px;
+    border-top: 10px solid rgb(116, 33, 33);
+
+    top: 10px;
+    left: 10px;
+
+    animation-name: rond2 ;
+    animation-duration: 4s  ;
+    animation-direction: linear;
+    animation-iteration-count: infinite ;
+}
+
+.rond3{
+
+    height: 240px;
+    width: 240px;
+    border-top: 10px solid rgb(44, 114, 93);
+
+    animation-name: rond3 ;
+    animation-duration: 6s  ;
+    animation-direction: linear;
+    animation-iteration-count: infinite ;
+}
+
+@keyframes rond1
+  {
+    0%
+    {
+        transform: rotate(0);
+    }    
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    }
+
+    @keyframes rond2
+    {
+        0%
+        {
+            transform: rotate(0);
+        }    
+        100%
+        {
+            transform: rotate(360deg);
+        }
+        }
+
+    @keyframes rond3
+    {
+        0%
+        {
+            transform: rotate(0);
+        }    
+        100%
+        {
+            transform: rotate(360deg);
+        }
+        }
+
+
