@@ -1,0 +1,159 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Depuis l'été 2023 il est possible d'utiliser le nesting dans le CSS classique.
+Seulement attention il n'est possiblement pas encore déployé partout 
+De plus la standardisation n'est pas encore fait, et certaines règles peuvent dériver d'un navigateur à l'autre.*/
+body
+{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Comme en SCSS il est possible de mettre un selecteur dans un autre 
+    Ce qui suis équivaut à dire :
+        body > section */
+    > header
+    {
+        background-color: lightgreen;
+        text-align: center;
+        padding: 1rem;
+        /* On peut optionnellement ajouter le symbole "&" qui représente le selecteur parent.
+        notre selecteur est maintenant équivalent à :
+            body > header > h1  */
+        &>h1
+        {
+            font-size: 3rem;
+        }
+        >p
+        {
+            font-size: 1.5rem;
+        }
+    }
+    & main
+    {
+        width: 80%;
+        margin: auto;
+        background-color: lightcyan;
+        /* 
+            Actuellement, si je met un nom de balise, seul dans un nesting. 
+            Firefox le comprendra sans problème, mais chrome lui le refusera, pour ce dernier un "nested" selecteur doit obligatoirement commencer par un symbole :
+                &, :, ::, ~, +, >, ., #, [, @
+        */
+        & section 
+        {
+            margin: 20px 50px;
+            padding: 10px;
+            border-radius: 10px;
+            & h2
+            {
+                text-indent: 20px;
+                text-decoration: underline dashed red;
+            }
+            >p
+            {
+                margin: 1em auto;
+                text-align: justify;
+            }
+            /* 
+                Attention de bien mettre le nesting selector lorsque vous ne voulez pas selectionner un enfant:
+                    section{&:first-child}
+                équivaut à :
+                    section:first-child
+                    La première section d'un parent.
+                mais : 
+                    section{:first-child}
+                équivaut à : 
+                    section :first-child
+                    Le premier enfant d'une section.
+            */
+            &:first-child, &:last-child
+            {
+                background-color: lightsalmon;
+                box-shadow: 5px 5px 3px rgba(136, 84, 64, 0.432);
+            }
+            &:first-child span
+            {
+                font-family: monospace;
+            }
+            &:nth-child(2)
+            {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                >h2
+                {
+                    grid-column: 1/-1;
+                }
+                & article
+                {
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    padding: 5px;
+                    background-color: antiquewhite;
+                    box-shadow: 5px 5px 3px rgba(139, 131, 120, 0.5);
+                    & h3
+                    {
+                        text-align: center;
+                        font-size: 1.5em;
+                    }
+                    & footer
+                    {
+                        text-align: right;
+                    }
+                }
+            }
+            &:last-child 
+            {
+                & h2
+                {
+                    text-decoration: underline dotted blue;
+                    /* 
+                        On peut aussi récupérer un élément frère de cette façon.
+                    */
+                    & + p
+                    {
+                        font-size: 1.2em;
+                        & ~ p
+                        {
+                            font-style: italic;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    > footer
+    {
+        background-color: lightskyblue;
+        padding: 20px;
+        font-size: 1.5em;
+        & ul
+        {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+    }
+}
+/* classes */
+.strong
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* 
+        Il est ainsi possible de selectionner un élément par rapport à son parent.
+        à noter qu'ici j'utilise ":is" afin que cela commence par un symbole.
+        si je voulais dire ".truc .strong" je pourrais simplement dire ".truc &"
+    */
+    :is(header) &
+    {
+        text-decoration: underline;
+    }
+    :is(main) &
+    {
+        font-weight: bold;
+    }
+}
