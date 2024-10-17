@@ -1,0 +1,98 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Ouvrir et fermer la modal */
+input[name="modal"], .modal-lorem
+{
+    display: none;
+}
+input#modal-open:checked ~ .modal-lorem
+{
+    display: block;
+}
+/* design */
+label.open-btn
+{
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.modal-lorem
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 80vw;
+    height: 40vh;
+    padding: 10px;
+    overflow: auto;
+    resize: both;
+    /* 
+        Permet optionnellement de nomer notre conteneur.
+        Ce sera utile au niveau de la @rule container
+    */
+    container-name: maSuperModal;
+    /*
+        Obligatoire pour créer un "query container"
+        Un conteneur devient incapable de récupérer les informations sur la taille de son contenu. 
+        Il faudra donc lui fixer une hauteur et une largeur ou du moins qu'elles dependent d'un contexte comme les flex ou les grid.
+        
+        En échange deux choses seront possible, la première va être l'utilisation pour les éléments descendants des unités "cqw, cqh, cqi, cqb, cqmin, cqmax"
+        Ces unités représentent un pourcentage du conteneur. Un peu comme "vh, vw..." avec le viewport mais lié au conteneur.
+
+        Cette propriété peut prendre trois valeurs principales : 
+        normal (n'est pas un query container)
+        size (est un query container)
+        inline-size (est un query container mais uniquement sur l'axe "inline" (par défaut l'axe horizontal))
+    */
+    container-type: size;
+    & label.close-btn
+    {
+        color: red;
+        font-size: 40px;
+        float: right;
+        cursor: pointer;
+    }
+    & p
+    {
+        height: 100%;
+        & button
+        {
+            position: absolute;
+            bottom: 20px;
+            /* 50% de la largeur du conteneur */
+            left: 50cqw;
+            translate: -50% 0;
+            display: inline-block;
+            /* 35% de la largeur du conteneur */
+            width: 35cqw;
+        }
+    }
+}
+/* 
+    @container fonctionne un peu comme les media queries mais adapté au conteneur.
+    Ici j'indique par exemple que les règles suivantes s'appliquent uniquement si mon conteneur fait au moins 500px.
+
+    Ici j'indique le nom de mon conteneur. Mais cela est optionnelle.
+    Si aucun nom n'est indiqué, la règle s'applique à tous les conteneurs de la page.
+    Indiquer le nom permet d'appliquer la règle à ce seul conteneur.
+*/
+@container maSuperModal (min-width: 500px)
+{
+    .modal-lorem p
+    {
+        font-size: 2em;
+        & button
+        {
+            width: 50cqw;
+            /* 10% de la hauteur du conteneur */
+            height: 10cqh;
+        }
+    }
+}
