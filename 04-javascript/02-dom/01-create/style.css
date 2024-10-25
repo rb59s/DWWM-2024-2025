@@ -24,3 +24,23 @@ main p {
 footer{
     background-color: steelblue;
 }
+ 
+main > div{
+
+    width: 500px;
+    height: 250px;
+    background-color: lightgreen;
+    margin-left: 400px;
+    margin-bottom: 50px;
+}
+
+
+div button{
+color: rgb(0, 0, 0);
+width: 230px;
+height: 25px;
+}
+
+main > p{
+    color: black;
+}

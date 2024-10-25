@@ -72,3 +72,34 @@ for (let i = 0; i < 5; i++)
     */
     m.appendChild(p);
 }
+
+
+const t = document.createElement("div");
+m.appendChild(t);
+console.log(t);
+
+const ht = document.createElement("h1");
+ht.textContent="Santé"
+t.appendChild(ht);
+console.log(ht);
+
+const tp = document.createElement("p");
+tp.textContent="Manger 5 fruits et légumes par jours"
+t.appendChild(tp);
+ console.log(tp);
+
+ const tf = document.createElement("div");
+ t.appendChild(tf);
+ console.log(tf);
+
+
+ const tf1 = document.createElement("button");
+ tf1.textContent="afflelou afflelou !"
+ tf.appendChild(tf1);
+ console.log(tf1);
+
+ const tf2 = document.createElement("button");
+tf2.textContent="afflelou afflelou !"
+ tf.appendChild(tf2);
+ console.log(tf2);
+
