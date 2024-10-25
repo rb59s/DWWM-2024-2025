@@ -21,35 +21,38 @@ main{
 main p {
     margin: 2rem 0;
 }
+.marche1{
+    padding-left: 10rem;
+}
+.marche2{
+    padding-left: 8rem;
+}
+.marche3{
+    padding-left: 6rem;
+}
+.marche4{
+    padding-left: 4rem;
+}
+.marche5{
+    padding-left: 2rem;
+}
 footer{
     background-color: steelblue;
 }
-@keyframes gradientAnimation {
-    0% {
-      background-color: yellow;
-    }
-    50% {
-      background-color: red;
-    }
-    100% {
-      background-color: orange;
-    }
-  }
 div{
-    
-    animation: gradientAnimation 5s alternate infinite;
+    background-color: greenyellow;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 45vw;
-    min-height: 45vh;
+    width: 50wh;
+    min-height: 50vh;
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr auto;
     padding: 1rem;
-    border: 3px solid rgb(134, 151, 107);
+    border: 3px solid rgb(134, 200, 37);
     box-shadow: 5px 5px rgba(91, 134, 26, 0.3);
 }
 div h2{
@@ -64,23 +67,7 @@ div button:first-of-type{
 div button:last-of-type{
     grid-column: 2/3;
 }
- 
-main > div{
-
-    width: 500px;
-    height: 250px;
-    background-color: lightgreen;
-    margin-left: 400px;
-    margin-bottom: 50px;
-}
-
-
-div button{
-color: rgb(0, 0, 0);
-width: 230px;
-height: 25px;
-}
-
-main > p{
-    color: black;
+aside{
+    position: absolute;
+    left: -100vw;
 }
