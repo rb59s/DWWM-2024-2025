@@ -93,3 +93,16 @@ console.log(lis2[2]);
 // header.removeChild(h);
 
 // lis2[1].parentElement.append(lis2[2]);
+
+const asideDiv = document.querySelector('aside > div');
+const main = document.querySelector('main');
+main.appendChild(asideDiv);
+
+
+// const footerItems = document.querySelectorAll("footer li");
+// const newTexts = ["Accueil", "Services", "Contact"];
+
+
+// footerItems.forEach((item, index) => {
+//     item.textContent = newTexts[index];
+// });
