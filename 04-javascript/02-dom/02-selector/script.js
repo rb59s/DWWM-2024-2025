@@ -99,10 +99,13 @@ const main = document.querySelector('main');
 main.appendChild(asideDiv);
 
 
-// const footerItems = document.querySelectorAll("footer li");
-// const newTexts = ["Accueil", "Services", "Contact"];
+const footerItems = document.querySelectorAll("footer li");
+const newTexts = ["Accueil", "Services", "Contact"];
 
 
-// footerItems.forEach((item, index) => {
-//     item.textContent = newTexts[index];
-// });
+footerItems.forEach((caca, pipi) => {
+    caca.textContent = newTexts[pipi];
+});
+
+
+
