@@ -43,7 +43,7 @@ input1.addEventListener("input", e=>{
 
     console.log(e.target.value);
     if (e.target.value != "")
-    brn1.textContent= e.target.value;
+    btn1.textContent= e.target.value;
     else
     btn1.textContent = "Clique moi !";
 
@@ -54,13 +54,66 @@ input1.addEventListener("input", e=>{
 btn1.addEventListener("click", ()=>h1.textContent = input1.value,
 {once: true});
 
-const div4 = document.querySelector('div4');
+const div4 = document.querySelector('.div4');
 const gp = div4.querySelector('.grandParent');
 const pa = div4.querySelector('.parent');
 const en = div4.querySelector('.enfant');
 
-div4.addEventListener("click", ()=>console.log("div4"));
+div4.addEventListener("click", ()=>console.log(".div4"));
 gp.addEventListener("click", ()=>console.log("gp"));
 pa.addEventListener("click", ()=>console.log("pa"));
 en.addEventListener("click", ()=>console.log("en"));
 
+
+const div2 = document.querySelector('.div2');
+div2.addEventListener("click", ()=>console.log(".div4"));
+
+
+
+const div = document.getElementsByClassName("div2");
+const color = document.querySelector("#color");
+const button = document.getElementById("button");
+
+color.addEventListener("input", function() {
+    button.style.color = color.value;
+});
+
+button.addEventListener("click", function() {
+    div[0].style.backgroundColor = color.value;
+});
+//-------------------------------------------------------------------------------------------
+
+
+const button2 = document.getElementById("button2");
+ 
+const modal = document.querySelector(".hidden");
+ 
+button2.addEventListener("click", clique)
+function clique () {
+    modal.style.display="grid";
+};
+
+
+
+const button3 = document.getElementById("button4");
+ 
+button3.addEventListener("click", clique2)
+function clique2 () {
+    modal.style.display="none";
+}
+
+//-----------------------------------------------
+
+const liste = document.querySelectorAll(".liste");
+console.log(liste);
+
+liste[0].addEventListener("click", changecolor)
+function changecolor() {
+    liste[0].children[0].style.fontSize="2em";
+    liste[0].children[1].style.fontSize="2em";
+    liste[0].children[2].style.fontSize="2em";
+    liste[0].children[3].style.fontSize="2em";
+    liste[0].children[4].style.fontSize="2em";
+   
+    
+}

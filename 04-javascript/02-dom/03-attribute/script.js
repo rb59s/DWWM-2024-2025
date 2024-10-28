@@ -100,3 +100,14 @@ function couleurAleatoire() {
 
 
 
+// const div = document.getElementsByClassName(".div2");
+// const color = document.querySelector(".color");
+// const button = document.getElementById("#button");
+
+// color.addEventListener("input", function() {
+//     button.style.color = color.value;
+// });
+
+// div.addEventListener("click", function() {
+//     div.style.backgroundColor = div.value;
+// });
