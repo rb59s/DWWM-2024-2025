@@ -83,9 +83,9 @@ console.log(lis[2].closest("footer"));
 
 // ? ------------- Supprimer ou Déplacer ----------------
 // Pour déplacer un élément, il suffit de l'append ailleurs.
-header.append(lis2[0]);
+// header.append(lis2[0]);
 // remove supprime l'élément du HTML.
-lis2[2].remove();
+// lis2[2].remove();
 // Mais il existe toujours dans la variable JS.
 console.log(lis2[2]);
 
