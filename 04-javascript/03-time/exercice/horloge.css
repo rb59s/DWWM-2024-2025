@@ -1,0 +1,55 @@
+section{
+    margin: auto;
+    top: 30vh;
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    left: 30%;
+    background: url(./cadran20horloge-1-550x413.jpg) no-repeat;
+    background-size: 100%;
+    z-index: 1;
+}
+
+.min, .hour, .sec{
+    position: absolute;
+    border-radius: 7px;
+    transform-origin: bottom;
+}
+.hour{
+    position: absolute;
+    width: 1%;
+    height: 25%;
+    top: 15%;
+    left: 49.50%;
+    background: black;
+    z-index: 3;
+}
+.min{
+    position: absolute;
+    width: 1%;
+    height: 35%;
+    top: 5%;
+    left: 49.50%;
+    background: rgb(73, 72, 72);
+    z-index: 2;
+}
+.sec{
+    position: absolute;
+    width: 1%;
+    height: 40%;
+    top: 0%;
+    left: 49.50%;
+    background: rgb(206, 34, 34);
+    z-index: 1;
+}
+.rond{
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    top: 35.6%;
+    left: 47.50%;
+    border: 25px;
+    border-radius: 50%;
+    background: rgb(206, 34, 34);
+    z-index: 4;
+}
