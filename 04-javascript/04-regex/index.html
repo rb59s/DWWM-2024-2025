@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les regex</title>
-    <script src="./script.js" defer></script>
+    <!-- <script src="./script.js" defer></script> -->
+    <script src="./exercice/script.js" defer></script>
+    <link rel="stylesheet" href="./exercice/style.css">
 </head>
 <body>
+    <section class="contact">Coordonnées
+        
+        <div class="tel">Téléphone</div>
+        <input type="text" id="numberInput"
+        placeholder="Entrez votre numéro de téléphone">
+        <br>
+        <div class="mail">Email</div>
+        <input type="text" id="mailInput"
+        placeholder="Entrez votre adresse mail">
+    </section>
     
+
+    <section class="identify">Identifiants
+
+    <div class="nomUti">Nom d'utilisateur</div>
+    <br>
+    <input type="text" id="usernameInput"
+        placeholder="Entrez votre nom d'utilisateur">
+        
+    <div class="mdp1">Mot de passe</div>
+    <input type="text" id="passwordInput"
+        placeholder="Entrez votre mot de passe">
+
+    <div class="mdp2">Confirmation du mot de passe</div>
+    <input type="text" id="confirmPasswordInput"
+        placeholder="Confirmez votre mot de passe ">
+        
+        <ul id="passwordList">
+            <li id="length">Au moins 8 caractères</li>
+            <li id="lowercase">Lettre minuscule</li>
+            <li id="uppercase">Lettre majuscule</li>
+            <li id="number">Un chiffre</li>
+            <li id="special">Un caractère spécial</li>
+            </ul>
+            <div id="passwordProgressContainer">
+                <div id="passwordProgressBar"></div>
+            </div>
+    </section>
+    <!-- Formateur -->
+    <!-- <form action="" method="get">
+        <fieldset>
+            <legend>Coordonnées</legend>
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" name="tel" id="telephone">
+            <label for="email">Email :</label>
+            <input type="email" name="mail" id="email">
+        </fieldset>
+        <fieldset>
+            <legend>Identifiants</legend>
+            <label for="user">Nom d'Utilisateur :</label>
+            <input type="text" name="username" id="user">
+            <label for="pass">Mot de Passe :</label>
+            <input type="password" name="password" id="pass">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <label for="passBis">Confirmation du Mot de Passe :</label>
+            <input type="password" name="passwordBis" id="passBis">
+        </fieldset>
+        <input type="submit" value="Inscription">
+    </form> -->
 </body>
 </html>
