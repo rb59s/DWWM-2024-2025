@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juste prix</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="jeu">
+        <div class="carte">
+            <p></p>
+            <button onclick="restartJeu()" class="CLC">Recommencer</button>
+        </div>
+        <div class="W_L">
+            <p>Veuillez choisir un numéro entre 1 et 100, vous avez 7 essais</p>
+            <p class="message">bonne chance</p>
+            <p class="nbTent">il te reste 7 vie</p>
+        </div>
+        <div class="proposeur">
+            <input class="input" type="number" autofocus>
+            <button class="button" onclick="jeu()">Proposer</button>
+        </div>
+    </div>
+</body>
+
+</html>
