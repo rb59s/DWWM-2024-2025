@@ -147,3 +147,9 @@ console.log(phrase2.replace(/javascript/gi, "CSS et $& et PHP"));
 console.log(/[A-z]/.test("_"));
 // On écrira donc plus habituellement :
 console.log(/[A-Za-z]/.test("_"));
+
+
+
+const tel = document.getElementById('telephone');
+const email = document.getElementById('exampleInputEmail1');
+
