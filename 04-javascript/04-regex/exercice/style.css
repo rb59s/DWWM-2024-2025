@@ -1,0 +1,73 @@
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(182, 186, 170);
+}
+
+section {
+    font-size: 16px;
+    color: rgb(81, 71, 71);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    font-weight: bold;
+    padding: 50px;
+    margin-left: 35vw;
+    margin-top: 10vh;
+    border: 3px solid burlywood;
+    width: 30rem;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
+    color: ghostwhite;
+    font-size: 13px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input.error {
+    background-color: orange;
+    color: white; 
+}
+
+ul {
+    padding-top: 20px;
+    color: rgb(235, 235, 236);
+    font-size: 12px;
+    font-weight: normal; 
+    font-family: sans-serif;
+}
+
+input:focus {
+    border-color: burlywood;
+    outline: none;
+}
+
+#passwordProgressContainer {
+    width: 100%;
+    background-color: #d8d8d8; 
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#passwordProgressBar {
+    height: 10px;
+    width: 0%; 
+    background-color: rgb(68, 234, 50);
+    transition: width 0.3s ease;
+}
+
+#passwordList li {
+    color: ghostwhite; 
+}
