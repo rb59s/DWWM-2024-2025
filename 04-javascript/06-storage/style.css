@@ -83,3 +83,16 @@ body.dark{
 body.dark h1{
     color: rgb(195, 99, 115);
 }
+/* exercice */
+body.bleu {
+    background-color: aqua;
+    color: orchid;
+}
+body.vert{
+    background-color: chartreuse;
+    color: magenta;
+}
+body.rouge {
+    background-color: red;
+    color: gold;
+}
