@@ -64,22 +64,22 @@ input:checked + .slider::before{
 .slider.round::before{
     border-radius: 50%;
 }
-/* 
-Ces média queries se déclenchent selon le thème du navigateur ou de l'OS. (window, mac..)
-@media (prefers-color-scheme: dark) {
+
+/* Ces média queries se déclenchent selon le thème du navigateur ou de l'OS. (window, mac..) */
+/* @media (prefers-color-scheme: dark) {
     body{
         background-color: #333;
         color: antiquewhite;
     }
 } 
- @media (prefers-color-scheme: light) {}
-*/
+ @media (prefers-color-scheme: light) {} */
+
 /* Tous élément html se trouvant dans le body, ajouter ou retirer une classe
 du body permettra de changer tous le thème.*/
-/* body.dark{
+body.dark{
     background-color: #333;
     color: antiquewhite;
 }
 body.dark h1{
     color: rgb(195, 99, 115);
-} */
+}
