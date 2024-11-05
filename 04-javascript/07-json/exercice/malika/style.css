@@ -1,0 +1,85 @@
+ body {
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ background-image: url('q4rwd9soxvgd1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h2 {
+    font-family: cursive ;
+    color: #FFFFFF;
+    font-size: 45px;
+    text-align: center;
+    text-shadow: #FFFFFF 0 0 12px, #A91079 0 0 25px, #A91079 0 0 35px, #A91079 0 0 45px;
+}
+h2:hover{
+    text-shadow: #FFFFFF 0 0 24px, #A91079 0 0 45px, #A91079 0 0 55px, #A91079 0 0 65px;
+}
+
+.container{
+    backdrop-filter: blur(5px);
+    border: solid white 1px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.185);
+    width: 50%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#champ {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: white;
+    border-color: rgba(243, 243, 243, 0);
+    width: 70%;
+    height: 100%;
+    text-align: left;
+}
+
+#champ:hover{
+    background-color: #faf9f9;
+    box-shadow: #FFFFFF 0 0 12px, #A91079 0 0 25px, #A91079 0 0 35px, #A91079 0 0 45px; 
+}
+
+
+#btnAjouter {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: white;
+    border-color: rgba(255, 255, 255, 0);
+    width: 10%;
+    text-align: center;
+} 
+
+#btnAjouter:hover {
+    background-color: #faf9f9;
+    box-shadow: #FFFFFF 0 0 12px, #A91079 0 0 25px, #A91079 0 0 35px, #A91079 0 0 45px;
+  }
+
+span {
+    cursor : pointer;
+    color: white;
+    float: right;
+    padding-right: 25px;
+    
+}
+ol{
+    font-family: cursive ;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: left;
+}
