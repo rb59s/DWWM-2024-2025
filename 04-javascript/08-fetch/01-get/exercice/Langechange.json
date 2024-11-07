@@ -1,0 +1,18 @@
+{
+    "languages":{
+        "fr":{
+            "h1":"Mon site Génial",
+            "p" : "Ce site vous propose un contenu des plus passionnants",
+            "img":"url('img/francais.png')"
+
+        },
+        "en":{
+            "h1":"My Awesome Site",
+            "p" : "This site offers you a most exciting tour",
+            "img":"url('img/anglais.png')"
+        },
+        "ar":{
+            "h1":"موقعي الرائع",
+            "p":"يقدم لك هذا الموقع بعضا من أكثر المحتويات إثارة",
+            "img":"url('img/R.jpeg')"
+}}}

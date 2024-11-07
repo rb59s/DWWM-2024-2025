@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .language-select { 
+            width: 100px;
+             height: 40px; 
+             background: url('img/francais.png') no-repeat right center;
+             background-size: 30px 20px; } 
+            .language-select option { background-size: 30px 20px; padding-left: 40px; } 
+            .language-select option[value="fr"] { background: url('img/francais.png') no-repeat left center; } 
+            .language-select option[value="en"] { background: url('img/anglais.png') no-repeat left center; } 
+            .language-select option[value="ar"] { background: url('img/R.jpeg') no-repeat left center; }
+         </style>
+</head>
+<body id="body">
+    <select name="pets" id="pet-select" multiple ></select> 
+    <div id="membreAffiche"></div>
+
+
+
+    <div id="languageImg" style="border: 5px solid rgb(218, 228, 14); margin: 20px; padding: 20px;"> 
+        <select class="language-select">
+             <option value="fr">Français</option> 
+             <option value="en">English</option> 
+             <option value="ar">العربية</option> 
+        </select>
+    
+        <h1 id="title" style="text-align: center;">Mon site Génial</h1>
+        <p id="labelSubject" style="text-align: center;">Ce site vous propose un contenu des plus passionnants</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
