@@ -100,3 +100,12 @@ function handleFetch(response)
     }
 }
 console.log("fin du code");
+
+
+
+
+
+
+
+fetch(url).then(handleFetch);
+
