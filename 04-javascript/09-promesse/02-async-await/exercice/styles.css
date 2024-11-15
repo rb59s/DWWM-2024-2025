@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .feutrico {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    margin: 0px auto;
+    border: #333 5px solid;
+    background-color: grey;
+    border-radius: 10%;
+    
+    
+  }
+  .poteau{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    width: 55px;
+    margin: -5px auto 0px auto;
+    border: #333 5px solid;
+    border-top: none;
+    background-color: grey;
+    height: 200px;
+
+
+  }
+  
+  .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 10px auto;
+  }
+  
+  #green {
+    background-color: rgb(70, 219, 70);
+    border: #333 3px solid;
+    outline: #333 4px solid;
+    outline-offset: 2px;
+  }
+  
+  #yellow {
+    background-color: rgb(219, 119, 25);
+    border: #333 3px solid;
+    outline: #333 4px solid;
+    outline-offset: 2px;
+  }
+  
+  #red {
+    background-color: rgb(212, 36, 36);
+    border: #333 3px solid;
+    outline: #333 4px solid;
+    outline-offset: 2px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  h2 {
+    color: #444;
+  }
+  
+  #tri-result {
+    margin-top: 20px;
+    color: #444;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
