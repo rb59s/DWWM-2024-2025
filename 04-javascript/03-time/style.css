@@ -32,3 +32,22 @@ footer{
     position: absolute;
     transition: width 0.3s;
 }
+
+.img{
+    margin: 0px;
+    padding: 0px;
+    /* transform: translate(400px, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point{
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0%;
+    padding: 0%;
+}

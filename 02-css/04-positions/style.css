@@ -46,8 +46,8 @@ nav ul
         En position sticky, l'élément se déplacera dans son parent, dès que la limite indiqué par les propriétés (top, left, bottom ou right) sera atteinte.
     */
     position: sticky;
-    top: 70px;
-}
+    top: 70px; 
+} 
 main
 {
     width: calc(100% - 210px);

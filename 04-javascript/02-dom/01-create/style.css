@@ -64,3 +64,23 @@ div button:first-of-type{
 div button:last-of-type{
     grid-column: 2/3;
 }
+ 
+main > div{
+
+    width: 500px;
+    height: 250px;
+    background-color: lightgreen;
+    margin-left: 400px;
+    margin-bottom: 50px;
+}
+
+
+div button{
+color: rgb(0, 0, 0);
+width: 230px;
+height: 25px;
+}
+
+main > p{
+    color: black;
+}

@@ -75,3 +75,39 @@ console.log(a.dataset.color);
 a.dataset.color = "Je ne suis pas une couleur !";
 // Modifier un éléménet qui n'existe pas, l'ajoute :
 a.dataset.bidule = "je ne sert à rien";
+
+const modale = document.querySelector('aside');
+console.log(modale)
+modale.style.left = "calc(50% - 50px)";
+modale.style.bottom = "calc(50% - 50px)";
+
+
+
+
+
+const modale2 = document.querySelector('aside > div')
+function couleurAleatoire() {
+    let lettres = "0123456789ABCDEF";
+    let couleur = "#";
+    for (let i = 0; i < 6; i++) {
+      couleur += lettres[Math.floor(Math.random() * 16)];
+    }
+    return couleur;
+  }
+
+  
+  modale2.style.backgroundColor = couleurAleatoire();
+
+
+
+// const div = document.getElementsByClassName(".div2");
+// const color = document.querySelector(".color");
+// const button = document.getElementById("#button");
+
+// color.addEventListener("input", function() {
+//     button.style.color = color.value;
+// });
+
+// div.addEventListener("click", function() {
+//     div.style.backgroundColor = div.value;
+// });
